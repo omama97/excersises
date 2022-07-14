@@ -1,0 +1,32 @@
+.container {
+  position: relative;
+  /* background-color: green; */
+  width: calc(40% + 6px);
+  height: 56px;
+}
+.one {
+  display: inline-block;
+  background-color: #f5b9c2;
+  width: calc(40% / 3);
+  height: 40px;
+  border: 2px solid black;
+  float: left;
+}
+.two {
+  display: inline-block;
+  background-color: #f5b9c2;
+  width: calc(40% / 3);
+  height: 40px;
+  border: 2px solid black;
+  border-left: 0px;
+  float: left;
+}
+.three {
+  display: inline-block;
+  background-color: #f5b9c2;
+  width: calc(40% / 3);
+  height: 40px;
+  border: 2px solid black;
+  border-left: 0px;
+  float: left;
+}

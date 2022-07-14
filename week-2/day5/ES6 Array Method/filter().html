@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="items"></div>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+
+    <script>
+      let vegetables = [
+        { name: "Eggplant", color: "purple" },
+        { name: "Carrot", color: "orange" },
+        { name: "Squash", color: "orange" },
+        { name: "Tomatoe", color: "red" },
+        { name: "Onion", color: "white" },
+        { name: "Sweet Potato", color: "orange" },
+      ];
+      for (let vegetable of orangeVegetables) {
+        console.log(vegetable.name); //expect to see Carrot, Squash, and Sweet Potato
+      }
+      let orangeVegetables = vegetables.filter((v) => v.color === "orange");
+    </script>
+  </body>
+</html>

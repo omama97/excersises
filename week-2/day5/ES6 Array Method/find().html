@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="items"></div>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+
+    <script>
+      let posts = [
+        {
+          id: 0,
+          text: "I'm not here",
+          comments: [{ id: 0, text: "support that" }],
+        },
+        {
+          id: 1,
+          text: "Find me",
+          comments: [
+            { id: 0, text: "here I am" },
+            { id: 1, text: "rock you like a hurricane" },
+            { id: 2, text: "dum dum" },
+          ],
+        },
+        {
+          id: 2,
+          text: "Where's waldo anyway",
+          comments: [
+            { id: 0, text: "who's waldo" },
+            { id: 1, text: "he's called Effi" },
+          ],
+        },
+        {
+          id: 3,
+          text: "Poof",
+          comments: [{ id: 0, text: "like magic" }],
+        },
+      ];
+
+      const findCommentById = (postID, commentID) => {
+        let post = findById(postID);
+        return post.comments.find((c) => c.id == commentID);
+      };
+      console.log(findCommentById(1, 0)); // {id: 0, text: "here I am"}
+      findCommentByID(1, 0);
+      //console.log(findById(1));
+    </script>
+  </body>
+</html>

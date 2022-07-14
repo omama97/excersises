@@ -1,0 +1,38 @@
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  /* grid-gap: 10px; */
+  /* background-color: blueviolet; */
+  /*ex1
+   grid-template-areas:
+    "header header header header header header"
+    "aside aside main main main main"
+    "aside aside footer footer footer footer"; */
+  /* spothrck one
+   grid-template-areas:
+    "header header footer footer aside aside "
+    "header header footer footer aside aside"
+    "header header . . aside aside"
+    "header header main main aside aside"
+    "header header main main aside aside"; */
+}
+.item {
+}
+.header {
+  background-color: #f7b733;
+  grid-area: header;
+}
+.main {
+  background-color: #4abdac;
+  grid-area: main;
+}
+.aside {
+  background-color: #fc4a1a;
+  grid-area: aside;
+}
+.footer {
+  background-color: #dfdce3;
+  grid-area: footer;
+}

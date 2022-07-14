@@ -1,0 +1,57 @@
+/*     
+margin
+padding
+position
+relative
+absolute
+left, top, right, bottom  */
+
+.parentr {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  background-color: red;
+  /* display: inline-block; */
+  /* padding: 10px; */
+}
+.childb {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+
+  /* opacity: 20%; */
+}
+.childg {
+  background-color: green;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  right: 0px;
+  top: 0px;
+  /* opacity: 50%; */
+}
+.childy {
+  position: absolute;
+  background-color: #ffd700;
+  width: 100px;
+  height: 100px;
+  bottom: 0px;
+  left: 0px;
+}
+.childp {
+  position: absolute;
+  background-color: #800080;
+  width: 100px;
+  height: 100px;
+  bottom: 0px;
+  right: 0px;
+}
+.childw {
+  position: absolute;
+  background-color: #fff;
+  width: 100px;
+  height: 100px;
+  top: 100px;
+  left: 100px;
+}

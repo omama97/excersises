@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const turnToKing = function (name, money) {
+        name = name.toUpperCase();
+        money = increaseByNameLength(money, name);
+        name = makeRegal(name);
+
+        console.log(name + " has " + money + " gold coins");
+      };
+
+      function increaseByNameLength(money, name) {
+        return name.length * money;
+      }
+      function makeRegal(name) {
+        return "His Royal Highness, " + name;
+      }
+      turnToKing("martin luther", 100); // should print "His Royal Highness, MARTIN LUTHER has 1300 gold coins"
+    </script>
+  </body>
+</html>

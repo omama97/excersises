@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const dictionary = {
+        A: ["Aardvark", "Abacus", "Actually", "Atomic"],
+        B: ["Banana", "Bonkers", "Brain", "Bump"],
+        C: ["Callous", "Chain", "Coil", "Czech"],
+      };
+      // const propertie = Object.keys(dictionary); // [a,b,c]
+      // console.log(dictionary.A);
+      // for (const words of propertie) {
+      //   console.log(words);
+
+      //   for (x of words) {
+      //     console.log(dictionary.x);
+      //   }
+      // }
+
+      let properties = Object.keys(dictionary);
+
+      console.log(properties);
+      for (let property of properties) {
+        console.log("Words that begin with " + property + ":");
+        for (let word of dictionary[property]) {
+          console.log("\t" + word);
+        }
+      }
+    </script>
+  </body>
+</html>

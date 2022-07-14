@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="items"></div>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+
+    <script>
+      let movies = [
+        { title: "Dareangel", studio: "Marvel", year: 2023 },
+        { title: "Batterfly", studio: "Fox", year: 2021 },
+        { title: "League of Ordinary People", studio: "Blizzard", year: 2025 },
+        { title: "Thor: Ragnarok", studio: "Marvel", year: 2017 },
+      ];
+
+      if (movies.some((m) => m.studio === "Marvel")) {
+        console.log("Let's go watch some movies");
+      } else {
+        console.log("Let's stay home");
+      }
+
+      if (movies.every((m) => m.year > 2020)) {
+        console.log("Futuristic stuff");
+      } else {
+        console.log("Yawn");
+      }
+    </script>
+  </body>
+</html>

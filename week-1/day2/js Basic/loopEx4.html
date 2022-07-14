@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const posts = [
+        {
+          id: 1,
+          text: "Love this product",
+          comments: [],
+        },
+        {
+          id: 2,
+          text: "This is the worst. DON'T BUY!",
+          comments: [
+            { id: 1, text: "Idiot has no idea" },
+            { id: 2, text: "Fool!" },
+            { id: 3, text: "I agree!" },
+          ],
+        },
+        {
+          id: 3,
+          text: "So glad I found this. Bought four already!",
+          comments: [],
+        },
+      ];
+      for (const i in posts) {
+        if (posts[i].id === 2) {
+          for (const ii in posts[i].id.comments) {
+            if (posts[i].id.comments[ii].id === 3) posts.comments.splice(ii, 1);
+          }
+        }
+      }
+      console.log(posts);
+    </script>
+  </body>
+</html>

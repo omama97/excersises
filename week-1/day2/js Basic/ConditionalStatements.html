@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let boughtTesla = true;
+      const yearOfTeslaPurchase = 2014;
+      let isUSCitizen = true;
+      let currentYear = 2018;
+
+      if (boughtTesla === true && isUSCitizen === true) {
+        howLongBuyTesla = currentYear - yearOfTeslaPurchase;
+        if (yearOfTeslaPurchase > 4) {
+          console.log("customer would like an upgrade");
+        } else {
+          console.log("whether the customer is satisfied with the car");
+        }
+      } else if (boughtTesla === true && isUSCitizen === false) {
+        console.log("the customer would like to move to the US");
+      } else {
+        console.log("are interested in buying one");
+      }
+    </script>
+  </body>
+</html>

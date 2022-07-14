@@ -1,0 +1,20 @@
+.container {
+  width: 1000px;
+  height: 400px;
+}
+.one {
+  display: inline-block;
+  background-color: #f5b9c2;
+  width: calc(100% - 20px);
+  height: 100px;
+  float: left;
+}
+
+.two {
+  display: inline-block;
+
+  background-color: #e28683;
+  width: 20px;
+  height: 100px;
+  float: left;
+}

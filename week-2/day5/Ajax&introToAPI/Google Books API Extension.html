@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="fetch()">Get Data</button>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+
+    <script>
+      let neruoscienceComputerBooks = [];
+
+      const fetch = function (startIndex) {
+        $.ajax({
+          method: "GET",
+          url: `https://www.googleapis.com/books/v1/volumes?q=intitle:neuroscience&startIndex=${startIndex}&maxResults=40`,
+          success: function (data) {
+            console.log(data);
+            let book;
+            for (let j = 0; j < data.items.length; j++) {
+              book = data.items[j];
+              if (book.volumeInfo.categories) {
+                if (book.volumeInfo.categories.some((c) => c === "Computers")) {
+                  neruoscienceComputerBooks.push(book.volumeInfo.title);
+                }
+              }
+            }
+
+            console.log(neruoscienceComputerBooks);
+          },
+          error: function (xhr, text, error) {
+            console.log(text);
+          },
+        });
+      };
+
+      let startIndexArr = [0, 40, 120];
+      for (let i = 0; i < 3; i++) {
+        console.log(i);
+        fetch(startIndexArr[i]);
+      }
+
+      console.log(neruoscienceComputerBooks);
+    </script>
+  </body>
+</html>

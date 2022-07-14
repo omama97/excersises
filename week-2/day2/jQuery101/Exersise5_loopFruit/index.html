@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .brown {
+        color: brown;
+      }
+
+      .green {
+        color: green;
+      }
+
+      .orange {
+        color: orange;
+      }
+
+      .yellow {
+        color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="basket"></div>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+      const fruits = [
+        { name: "Orange", color: "orange" },
+        { name: "Banana", color: "yellow" },
+        { name: "Coconut", color: "brown" },
+        { name: "Kiwi", color: "brown" },
+        { name: "Lemon", color: "yellow" },
+        { name: "Cucumber", color: "green" },
+        { name: "Persimmon", color: "orange" },
+        { name: "Pumpkin", color: "orange" },
+      ];
+
+      for (const iterator of fruits) {
+        $("#basket").append(
+          `<div class="${iterator.color}">${iterator.name}</div>`
+        );
+      }
+    </script>
+  </body>
+</html>

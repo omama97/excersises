@@ -1,0 +1,126 @@
+body {
+  color: black;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  background-color: #ecf0f1;
+}
+.Friends_container {
+  display: grid;
+  height: 500px;
+  grid-template-rows: repeat(5, 1fr);
+  background-color: #8e44ad;
+  grid-template-areas:
+    "Friends"
+    "Freya"
+    "Linda"
+    "Kenan"
+    "Theresa";
+}
+.Friends {
+  grid-area: Friends;
+  color: black;
+}
+.Freya {
+  display: inline-block;
+  margin: 40px 5px;
+  background-color: #9b59b6;
+  grid-area: Freya;
+  color: #fff;
+}
+.Linda {
+  display: inline-block;
+  margin: 40px 5px;
+  background-color: #9b59b6;
+  grid-area: Linda;
+  color: #fff;
+}
+.Kenan {
+  display: inline-block;
+  margin: 40px 5px;
+  background-color: #9b59b6;
+  grid-area: Kenan;
+  color: #fff;
+}
+.Theresa {
+  display: inline-block;
+  margin: 40px 5px;
+  background-color: #9b59b6;
+  grid-area: Theresa;
+  color: #fff;
+} /* grid-template-rows: repeat(11,1fr)
+  grid-template-areas:
+    ". ."
+    "hey ."
+    ". ."
+    "hello ."
+    ". sorry"
+    "work ."
+    ". tell"
+    "type send"; */
+.MS_container {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: repeat(6, 1fr);
+  align-items: flex-end;
+  grid-template-areas:
+    "hey ."
+    "hello ."
+    ". sorry"
+    "work ."
+    ". tell"
+    "type send";
+}
+.hey {
+  background-color: #bdc3c7;
+  grid-area: hey;
+  border-radius: 10px;
+}
+.hello {
+  background-color: #bdc3c7;
+  grid-area: hello;
+}
+.work {
+  background-color: #bdc3c7;
+  grid-area: work;
+}
+.type {
+  background-color: #fff;
+  grid-area: type;
+  border: 1px solid #bdc3c7;
+}
+
+.sorry {
+  grid-area: sorry;
+  background-color: #2ecc71;
+}
+.tell {
+  background-color: #2ecc71;
+  grid-area: tell;
+}
+.send {
+  grid-area: send;
+  border: 1px solid #bdc3c7;
+
+  background-color: #8e44ad;
+}
+.message-time {
+  font-family: "Gloria Hallelujah", cursive;
+  display: grid;
+  grid-area: t;
+  padding-right: 8px;
+  padding-bottom: 3px;
+  justify-self: end;
+  align-self: end;
+  font-size: 12px;
+}
+.message-time {
+  justify-content: end;
+}
+.spaces_container {
+  background-color: red;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: ;
+}

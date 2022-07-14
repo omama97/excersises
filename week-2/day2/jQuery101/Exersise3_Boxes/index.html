@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 70px;
+        height: 70px;
+        margin: 10px;
+        background-color: #8e44ad;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+      let box1 = $("body").append(`<div class="box"> </div>`);
+      let box2 = $("body").append(`<div class="box"> </div>`);
+      let $boxes = $(".box");
+
+      $(".box").hover(function () {
+        $boxes.css("background-color", "rgb(231, 76, 60)");
+
+        $(this).css("background-color", "rgb(142, 68, 173)");
+      });
+    </script>
+  </body>
+</html>

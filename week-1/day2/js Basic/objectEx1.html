@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="info"></div>
+    <script>
+      let p1 = {
+        name: "omama",
+        age: 22,
+        city: "Ramallah",
+      };
+      let p2 = {
+        name: "ahmad",
+        age: 22,
+        city: "rr",
+      };
+
+      if (p1["age"] == p2["age"] && p1.city == p2.city) {
+        let print = `<div>${p1.age}</div>`;
+        console.log(print);
+        document.getElementById("info").innerHTML = print;
+      } else if (p1["age"] == p2["age"] && p1.city !== p2.city) {
+        console.log("Jill wanted to date Robert, but couldn't");
+      }
+    </script>
+  </body>
+</html>

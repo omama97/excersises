@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style> 
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+</style>
+</head>
+  </head>
+  <body>
+
+<div id="posts"></div>
+
+<input type="text"id="name" >
+<input type="text" id="text">
+<button id="button1" style="width:100px ;"> post</button>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+let posts=[
+  {name:"ahmad",text:"comment here plz"},
+  {name:"omama",text:"text hers lady"}
+]
+ const render = function() {
+        for(let post of posts) {
+            $("#posts").append($(`<div class="post">${post.name}: ${post.text}</div>`))
+        }
+    }
+
+    render()
+$("#button1").css
+$("#button1").click(function(){
+let nameId=$("#name").val();
+let textId=$("#text").val();
+console.log(nameId);
+posts.push({name:nameId,text:textId})
+
+ $("#posts").empty()
+        render()
+         $("#name").val("");
+         $("#text").val("")
+})   
+
+$("#posts").on("click", ".post", function () {
+        
+        const $post = $(this)
+        
+        const name = $post.text().substring(0, $post.text().indexOf(":"))
+        console.log(name);
+        for(let i in posts) {
+            if(posts[i].name === name) {
+                posts.splice(i, 1)
+            }
+        }
+    
+
+        $("#posts").empty()
+        render()
+    })
+    </script>
+    <!-- <script src="main.js"></script> -->
+  </body>
+</html>

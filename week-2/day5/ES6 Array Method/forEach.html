@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //forEach always come with element
+      //   const arr = ["a", "b", "c", "", , ""];
+      //     for (let index = 0; index < array.length; index++) {
+      //       const element = arr[index];
+      //     }
+
+      //   let callBack = 0;
+      //   arr.forEach((element, i) => {
+      //     console.log(`${i} - ${element}`);
+      //     callBack += 1;
+      //   });
+
+      //   console.log(callBack);
+
+      let x = [1, 2, 3, 4, 5];
+      //   let z = 0;
+      //   x.forEach((element) => {
+      //     z += element;
+      //   });
+      let z = 0;
+
+      function sum(element) {
+        z += element;
+      }
+
+      x.forEach(sum);
+      console.log(z);
+
+      //   let people = [
+      //     { salary: 1300, goodPerformance: false },
+      //     { salary: 1500, goodPerformance: true },
+      //     { salary: 1200, goodPerformance: true },
+      //     { salary: 1700, goodPerformance: false },
+      //     { salary: 1600, goodPerformance: true },
+      //   ];
+      //   function name(person) {
+      //     if (person.goodPerformance == true) {
+      //       person.salary += 300;
+      //       console.log(person.salary);
+      //     } else {
+      //       console.log(person.salary);
+      //     }
+      //   }
+
+      //   people.forEach(name);
+    </script>
+  </body>
+</html>

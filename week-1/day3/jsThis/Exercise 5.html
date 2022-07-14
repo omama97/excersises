@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const revealSecret = function () {
+        return this.secret;
+      };
+
+      const shoutIt = function (person, func) {
+        person.revealItAll = func;
+        const result = person.revealItAll();
+        alert(person.name + " said: " + result);
+      };
+
+      const avi = {
+        name: "Avi",
+        secret: "Im scared of snakes!",
+      };
+
+      const narkis = {
+        name: "Narkis",
+        secret: "I dont have secrets because I'm zen like that.",
+      };
+
+      shoutIt(avi, revealSecret);
+      shoutIt(narkis, revealSecret);
+    </script>
+  </body>
+</html>

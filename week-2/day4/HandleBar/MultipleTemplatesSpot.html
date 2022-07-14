@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+
+
+    <script id="first-template" type="text/x-handlebars-template">
+      {{#each animals}} <p>{{This}}</p>{{/each}}
+    </script>
+
+    <div id="normal">Regular HTML Stuff</div>
+
+    <script id="second-template" type="text/x-handlebars-template">
+      {{#each languages}}<p>{{This}}</p>{{/each}}
+    </script>
+
+    <p id="special"></p>
+
+    <div class="items"></div>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+
+    <script>
+      selectedUsers: ["Popeye", "Sulley", "Gru"];
+
+      animals: [
+        "Rabbit",
+        "Giraffe",
+        "Kangaroo",
+        "Whale",
+        "Seagull",
+        "Caterpie",
+      ];
+
+      languages: ["French", "Spanish", "Togolese", "Javascript", "Uruk"];
+
+        const renderFirst = function () {
+          const source = $("#first-template").html();
+          const template = Handlebars.compile(source);
+          let newHTML = template({ this :this});
+          $("body").append(newHTML);
+        };
+
+        const renderSecond = function () {
+          const source = $("#second-template").html();
+          const template = Handlebars.compile(source);
+          let newHTML = template({ this:this});
+          $("#special").append(newHTML);
+        };
+
+        renderFirst();
+        renderSecond();
+    </script>
+  </body>
+</html>

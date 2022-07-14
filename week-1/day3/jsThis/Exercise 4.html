@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const tipJar = {
+        coinCount: 20,
+        tip: function () {
+          this.coinCount += 1;
+        },
+        stealCoins: function (amount) {
+          this.coinCount -= amount;
+        },
+      };
+
+      tipJar.tip();
+      console.log("Tip jar should have 21 coins: " + tipJar.coinCount);
+
+      tipJar.stealCoins(3);
+      console.log("Tip jar should have 18 coins: " + tipJar.coinCount);
+
+      tipJar.stealCoins(10);
+      console.log("Tip jar should have 8 coins: " + tipJar.coinCount);
+    </script>
+  </body>
+</html>

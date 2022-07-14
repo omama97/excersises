@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="items"></div>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+
+    <script>
+      let ages = [12, 41, 11, 10, 32, 27, 18, 19, 19, 14, 58, 41, 9];
+
+      let olderThan16 = [];
+      for (let age of ages) {
+        if (age > 16) {
+          olderThan16.push(age);
+        }
+      }
+
+      let agess = [12, 41, 11, 10, 32, 27, 18, 19, 19, 14, 58, 41, 9];
+
+      let olderThan16s = agess.filter((a) => a > 16);
+      console.log(olderThan16); // prints [41, 32, 27, 18, 19, 19, 58, 41]
+    </script>
+  </body>
+</html>
