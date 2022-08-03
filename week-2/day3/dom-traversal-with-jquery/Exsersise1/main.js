@@ -27,6 +27,9 @@
 //   console.log(`Text: ${generatorText}\nMB: ${mb}\nQR 1: ${qr1}\nQR 2: ${qr2}`);
 // });
 
+let computer = $(this).closest(".computer");
+console.log(computer);
+
 $(".generator").on("click", function name() {
   let processorID = $(this).closest(".processor").attr("id");
   let dataId = $(this).closest(".computer").data().id;

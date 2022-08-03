@@ -19,6 +19,11 @@ $("button").on("click", function () {
 
 const renderApts = function (apartments) {
   $("#results").empty();
+  var template = $("#handlebars-results").html();
+  var templateScript = Handlebars.compile(template);
+  var context = { apartmentsKey: apartments };
+  var html = templateScript(context);
+  $("#results").append(html);
   console.log(apartments); //array of apartments to render
   //Your code goes here.
 };

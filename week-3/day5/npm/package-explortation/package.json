@@ -1,0 +1,17 @@
+{
+  "name": "package-explortation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "time.js",
+  "scripts": {
+    "time": "node time"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "font-awesome": "^4.7.0",
+    "handlebars": "^4.7.7",
+    "jquery": "^3.6.0",
+    "moment": "^2.29.4"
+  }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="results"></div>
+
+    <script id="handlebars-results" type="text/x-handlebars-template">
+      {{#each apartmentsKey}}
+        <div>
+          <img
+            src="{{this.img}}"
+            alt="Girl in a jacket"
+            width="500"
+            height="600"
+          />
+        </div>
+      {{/each}}
+    </script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
+    <script>
+      const apartments = [
+        {
+          img: "https://circaoldhouses.com/wp-content/uploads/2017/10/key-hole-house-1.jpg",
+          address: "P. Sherman 42 Wallabe Way, Sydney",
+          price: 2400,
+          rooms: 2,
+          parking: false,
+          immediate: true,
+          contactDetails: {
+            name: "Douglas",
+            email: "doug@less.com",
+          },
+        },
+        {
+          img: "https://i.pinimg.com/736x/17/f2/6e/17f26e8f188af5d3e377dacb2011889a--mediterranean-houses-mediterranean-style.jpg",
+          address: "Cherobee 21, South Boulevard",
+          price: 12000,
+          rooms: 5,
+          parking: true,
+          immediate: false,
+          contactDetails: {
+            name: "William",
+            email: "will@i.am",
+          },
+        },
+      ];
+
+      var template = $("#handlebars-results").html();
+      var templateScript = Handlebars.compile(template);
+      //   var context = { apartmentsKey: apartments };
+      var context = { apartmentsKey: apartments };
+      var html = templateScript(context);
+      $("#results").append(html);
+      console.log(apartments); //array of apartments to render
+    </script>
+  </body>
+</html>
